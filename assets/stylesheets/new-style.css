@@ -1,0 +1,428 @@
+@charset "UTF-8";
+/* Slider */
+/* line 3, ../sass/_slick.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 17, ../sass/_slick.scss */
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/* line 24, ../sass/_slick.scss */
+.slick-list:focus {
+  outline: none;
+}
+/* line 28, ../sass/_slick.scss */
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 33, ../sass/_slick.scss */
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 42, ../sass/_slick.scss */
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+}
+/* line 48, ../sass/_slick.scss */
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+/* line 54, ../sass/_slick.scss */
+.slick-track:after {
+  clear: both;
+}
+/* line 58, ../sass/_slick.scss */
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+/* line 62, ../sass/_slick.scss */
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+/* line 66, ../sass/_slick.scss */
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+/* line 69, ../sass/_slick.scss */
+.slick-slide img {
+  display: block;
+}
+/* line 72, ../sass/_slick.scss */
+.slick-slide.slick-loading img {
+  display: none;
+}
+/* line 78, ../sass/_slick.scss */
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+/* line 82, ../sass/_slick.scss */
+.slick-initialized .slick-slide {
+  display: block;
+}
+/* line 86, ../sass/_slick.scss */
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+/* line 90, ../sass/_slick.scss */
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* line 96, ../sass/_slick.scss */
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/*@function slick-image-url($url) {
+    @if function-exists(image-url) {
+        @return image-url($url);
+    }
+    @else {
+        @return url($slick-loader-path + $url);
+    }
+}
+
+@function slick-font-url($url) {
+    @if function-exists(font-url) {
+        @return font-url($url);
+    }
+    @else {
+        @return url($slick-font-path + $url);
+    }
+}*/
+/* Slider */
+/* line 45, ../sass/_slick-theme.scss */
+.slick-loading .slick-list {
+  background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: slick-font-url("slick.eot");
+  src: slick-font-url("slick.eot?#iefix") format("embedded-opentype"), slick-font-url("slick.woff") format("woff"), slick-font-url("slick.ttf") format("truetype"), slick-font-url("slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Arrows */
+/* line 63, ../sass/_slick-theme.scss */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 86px;
+  width: 66px;
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  z-index: 11;
+  outline: none;
+}
+/* line 80, ../sass/_slick-theme.scss */
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  color: #fff;
+}
+/* line 83, ../sass/_slick-theme.scss */
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+/* line 87, ../sass/_slick-theme.scss */
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+/* line 90, ../sass/_slick-theme.scss */
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 101, ../sass/_slick-theme.scss */
+.slick-prev {
+  left: -98px;
+}
+/* line 103, ../sass/_slick-theme.scss */
+[dir="rtl"] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+/* line 107, ../sass/_slick-theme.scss */
+.slick-prev:before {
+  content: "←";
+}
+/* line 109, ../sass/_slick-theme.scss */
+[dir="rtl"] .slick-prev:before {
+  content: "→";
+}
+
+/* line 115, ../sass/_slick-theme.scss */
+.slick-next {
+  right: -98px;
+}
+/* line 117, ../sass/_slick-theme.scss */
+[dir="rtl"] .slick-next {
+  left: -25px;
+  right: auto;
+}
+/* line 121, ../sass/_slick-theme.scss */
+.slick-next:before {
+  content: "→";
+}
+/* line 123, ../sass/_slick-theme.scss */
+[dir="rtl"] .slick-next:before {
+  content: "←";
+}
+
+/* Dots */
+/* line 131, ../sass/_slick-theme.scss */
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+/* line 135, ../sass/_slick-theme.scss */
+.slick-dots {
+  position: absolute;
+  bottom: -30px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+/* line 144, ../sass/_slick-theme.scss */
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  margin: 0 3px;
+  padding: 0;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+/* line 152, ../sass/_slick-theme.scss */
+.slick-dots li button {
+  border: 0;
+  background: #92989e;
+  display: block;
+  height: 10px;
+  width: 10px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 100%;
+}
+/* line 165, ../sass/_slick-theme.scss */
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+  background-color: #fff;
+}
+/* line 169, ../sass/_slick-theme.scss */
+.slick-dots li button:before {
+  display: none;
+}
+/* line 174, ../sass/_slick-theme.scss */
+.slick-dots li.slick-active button {
+  background-color: #fff;
+}
+
+/* line 7, ../sass/new-style.scss */
+.intro h3 {
+  margin-top: 0;
+  min-height: 100px;
+}
+
+/* line 13, ../sass/new-style.scss */
+.main-slider {
+  background-color: #25313d;
+  padding: 54px 0;
+}
+/* line 16, ../sass/new-style.scss */
+.main-slider .slick-arrow {
+  text-align: center;
+}
+/* line 18, ../sass/new-style.scss */
+.main-slider .slick-arrow:before {
+  display: none;
+}
+/* line 21, ../sass/new-style.scss */
+.main-slider .slick-arrow span {
+  display: block;
+}
+/* line 24, ../sass/new-style.scss */
+.main-slider .slick-arrow .arrow {
+  margin-bottom: 15px;
+}
+/* line 27, ../sass/new-style.scss */
+.main-slider .slick-arrow .arrow-text {
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+/* line 35, ../sass/new-style.scss */
+.map {
+  background-color: #f7f7f7;
+  padding-top: 72px;
+}
+/* line 38, ../sass/new-style.scss */
+.map .map--inner {
+  padding-bottom: 0;
+}
+/* line 40, ../sass/new-style.scss */
+.map .map--inner h2 {
+  color: #000;
+}
+/* line 43, ../sass/new-style.scss */
+.map .map--inner .map--legend {
+  top: auto;
+  bottom: 0;
+}
+/* line 47, ../sass/new-style.scss */
+.map .map--inner .map--select {
+  display: inline-block;
+  vertical-align: middle;
+  width: 270px;
+  height: 45px;
+  color: #000;
+  background-color: #dfdfdf;
+  border: none;
+  text-align: center;
+}
+/* line 57, ../sass/new-style.scss */
+.map .map--inner .map--instance {
+  width: 880px;
+  height: 566px;
+}
+
+/* line 63, ../sass/new-style.scss */
+.map-title {
+  color: #000;
+}
+/* line 65, ../sass/new-style.scss */
+.map-title h2 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+/* line 70, ../sass/new-style.scss */
+.main-map {
+  border-bottom: 1px solid #bababa;
+  padding-bottom: 20px;
+}
+
+/* line 75, ../sass/new-style.scss */
+.legend-mark {
+  color: #000;
+  padding: 29px 0 38px;
+  border-bottom: 1px solid #bababa;
+}
+
+/* line 80, ../sass/new-style.scss */
+.legend-strip {
+  max-width: 780px;
+  margin: 0 auto;
+}
+/* line 83, ../sass/new-style.scss */
+.legend-strip h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+/* line 87, ../sass/new-style.scss */
+.legend-strip .row {
+  margin: 0 -5px;
+}
+/* line 89, ../sass/new-style.scss */
+.legend-strip .row [class*="col-"] {
+  padding: 0 5px;
+}
+/* line 93, ../sass/new-style.scss */
+.legend-strip .strip {
+  height: 20px;
+  margin-bottom: 8px;
+}
+/* line 97, ../sass/new-style.scss */
+.legend-strip .strip-1 {
+  background-color: #008bbc;
+}
+/* line 100, ../sass/new-style.scss */
+.legend-strip .strip-2 {
+  background-color: #006096;
+}
+/* line 103, ../sass/new-style.scss */
+.legend-strip .strip-3 {
+  background-color: #003d76;
+}
+/* line 106, ../sass/new-style.scss */
+.legend-strip .strip-4 {
+  background-color: #764158;
+}
+/* line 109, ../sass/new-style.scss */
+.legend-strip span {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* line 114, ../sass/new-style.scss */
+.img-figure {
+  margin-bottom: 30px;
+}
+/* line 116, ../sass/new-style.scss */
+.img-figure img {
+  width: 100%;
+}

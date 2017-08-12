@@ -1,0 +1,258 @@
+
+/* Fission */
+/* line 3, /Users/maximostephani/trabajoAfuera/Fission/Mayors/2014/everytown/c3_site/workingcopy/everytownc3/wp-content/themes/everytown/scss/_general.scss */
+.article-content ul {
+  padding-right: 230px;
+  margin-left: 10px; }
+
+@media screen and (max-width: 992px) {
+  /* line 9, /Users/maximostephani/trabajoAfuera/Fission/Mayors/2014/everytown/c3_site/workingcopy/everytownc3/wp-content/themes/everytown/scss/_general.scss */
+  .main-issue-container .main-issue-image {
+    width: 100%;
+    height: auto; } }
+
+/* line 15, /Users/maximostephani/trabajoAfuera/Fission/Mayors/2014/everytown/c3_site/workingcopy/everytownc3/wp-content/themes/everytown/scss/_general.scss */
+.main-issue-container .copy-container p {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  bottom: 0; }
+
+/* line 23, /Users/maximostephani/trabajoAfuera/Fission/Mayors/2014/everytown/c3_site/workingcopy/everytownc3/wp-content/themes/everytown/scss/_general.scss */
+.main-issue-container .copy-container {
+  overflow: hidden; }
+
+/*
+.issue-block {
+	border: 1px #eceded solid;
+	max-width: 964px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	margin-bottom: 0;
+	.issue-module {
+		cursor: pointer;
+		position: relative;
+		text-align: center;
+		float: none;
+		width: auto;
+		padding: 20px 40px 0 40px;
+		height: auto;
+		border-bottom: 1px $et-grey solid;
+		border-top: none;
+		margin-bottom: 0;
+		border-right: none;
+		&:after {
+					clear: both;
+					content: "";
+					display: block;
+					position: relative;
+				}
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				float: none;
+				display: block;
+				padding-bottom: 20px;
+				position: relative;
+				.h1 {
+					font-size: ($font-size-base * 2 );
+				}
+				figure {
+					height: 100%;
+					margin-left: auto;
+					margin-right: auto;
+					img {
+						width: 140px;
+						height: 140px;
+						border-radius: 50%;
+						border: none;
+						vertical-align: middle;
+						max-width: none;
+					}
+				}
+				.module-text {
+					width: auto;
+					padding: 0;
+					span.h1 {
+						color: $et-black-blue;
+						font-family: "Mercury SSm A","Mercury SSm B";
+					}
+					.module-excerpt {
+						color: $et-black-blue;
+						margin-top: 10px; 
+						font-size: 14px;
+						font-family: "Mercury SSm A","Mercury SSm B";
+					}
+				}
+				a {
+					font-family: "Mercury SSm A","Mercury SSm B";
+					color: $et-black-blue;
+					font-size: 20px;
+					line-height: 20px;
+					display: block;
+					position: relative;
+					text-transform: uppercase;
+					padding-top: 7px;
+					span {
+						display: inline-block;
+						margin-left: 5px;
+						margin-right: 5px;
+					}
+					i {
+						font-size: 16px;
+						line-height: 17px;
+						position: absolute;
+						right: 20px;
+						margin-top: -5px;
+						top: 50%;
+					}
+				}
+			}
+		}
+		&:last-child {
+			border: 0px;
+		}
+		&:hover {
+			background-color: $et-light-grey;
+			img {
+				border: none;
+			}
+		}
+	}
+}
+
+
+@media (min-width: $screen-sm) {
+	
+	.issue-block {
+		margin-bottom: 100px;
+		.issue-module {
+			&:after {
+				clear: both;
+				content: "";
+				display: block;
+				position: relative;
+			}
+			width: 100%;
+			text-align: left;
+			padding: 40px 50px;
+			ul {
+				&:after {
+					clear: both;
+					content: "";
+					display: block;
+					position: relative;
+				}
+
+				&:before {
+					content: " ";
+					display: table;
+				}
+				li {
+					display: table-cell;
+					vertical-align: middle;
+					padding-bottom: 0;
+					.h1 {
+						font-size: $font-size-h1;
+					}
+					.module-text {
+						padding: 0 60px;
+						width: 100%;
+					}
+					a {
+						padding-left: 30px;
+						span {
+							display: block;
+							margin: 0;
+						}
+						i {
+							right: -30px;
+						}
+						
+						&:hover {
+							color: $et-red;
+							text-decoration: none;
+						}
+						
+					}
+					&:last-child {
+						float: left;
+						width: 70%;
+						margin-left: 170px;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+
+
+
+@media (min-width: $screen-md) {
+	
+	.issue-block {
+		.issue-module {
+			&:after {
+				clear: both;
+				content: "";
+				display: block;
+				position: relative;
+			}
+			ul {
+				&:after {
+					clear: both;
+					content: "";
+					display: block;
+					position: relative;
+				}
+
+				&:before {
+					content: " ";
+					display: table;
+				}
+				li {
+					&:last-child {
+						float: none;
+						width: auto;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+		
+}
+
+@media (max-width: 768px) {
+	body {
+		.issue-block {
+			
+			.issue-module {
+				
+				ul {
+					
+					li {
+						
+						a {
+							
+							i.gi-right-arrow {
+								font-size: 16px;
+								line-height: 17px;
+								position: absolute;
+								right: 20px;
+								margin-top: -6px;
+								top: 50%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+*/
